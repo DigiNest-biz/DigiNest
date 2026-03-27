@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Gift Card - Instant Rewards</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f4f8;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        h1 {
+            color: #1a73e8;
+        }
+        .offer-box {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 30px 0;
+        }
+        .btn {
+            display: inline-block;
+            background: #1a73e8;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background: #1557b0;
+        }
+        .note {
+            font-size: 12px;
+            color: #666;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎁 Claim Your Free Gift Card!</h1>
+        <p>Limited time offer – get a $100 gift card instantly.</p>
+        <div class="offer-box">
+            <p><strong>Step 1:</strong> Click the button below.</p>
+            <p><strong>Step 2:</strong> Enter your email and zip code.</p>
+            <p><strong>Step 3:</strong> Receive your gift card in minutes!</p>
+            <a href="#" id="offerLink" class="btn" target="_blank">👉 Claim Now 👈</a>
+        </div>
+        <div class="note">
+            *This offer is available for US residents only. Terms apply.
+        </div>
+    </div>
+
+    <script>
+        // ضع رابط العرض الخاص بك من MyLead بدلاً من الرابط المثال أدناه
+        const offerUrl = "https://your-mylead-offer-link.com";
+        document.getElementById("offerLink").onclick = function() {
+            window.open(offerUrl, "_blank");
+        };
+    </script>
+</body>
+</html>
