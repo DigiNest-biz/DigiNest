@@ -3,74 +3,227 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Free Gift Card - Instant Rewards</title>
+    <title>DigiNest | Exclusive Offers & Free Deals</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f0f4f8;
+        * {
             margin: 0;
-            padding: 20px;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        nav {
+            background: #1e2a3e;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            padding: 8px 15px;
+            transition: 0.3s;
+        }
+        nav a:hover {
+            background: #ff6b6b;
+            border-radius: 30px;
         }
         .container {
-            max-width: 600px;
-            margin: 50px auto;
+            max-width: 1100px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+        section {
+            margin-bottom: 60px;
             background: white;
             border-radius: 20px;
             padding: 30px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         }
         h1 {
-            color: #1a73e8;
+            font-size: 36px;
+            color: #1e2a3e;
+            margin-bottom: 20px;
         }
-        .offer-box {
-            background: #f9f9f9;
-            padding: 20px;
-            border-radius: 12px;
-            margin: 30px 0;
+        h2 {
+            font-size: 28px;
+            color: #ff6b6b;
+            margin-bottom: 20px;
+            border-left: 5px solid #ff6b6b;
+            padding-left: 15px;
         }
         .btn {
             display: inline-block;
-            background: #1a73e8;
+            background: #ff6b6b;
             color: white;
             padding: 12px 30px;
             text-decoration: none;
-            border-radius: 30px;
-            font-size: 18px;
+            border-radius: 50px;
             font-weight: bold;
+            font-size: 18px;
             transition: 0.3s;
+            margin-top: 15px;
+            border: none;
+            cursor: pointer;
         }
         .btn:hover {
-            background: #1557b0;
+            background: #ff4757;
+            transform: scale(1.03);
         }
-        .note {
-            font-size: 12px;
-            color: #666;
+        .offer-card {
+            background: #f9f9f9;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 25px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .offer-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        .footer {
+            background: #1e2a3e;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 40px;
+        }
+        .footer a {
+            color: #ffb6b6;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .social-links {
+            margin: 20px 0;
+        }
+        iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+            border-radius: 15px;
             margin-top: 20px;
+        }
+        @media (max-width: 768px) {
+            nav a { font-size: 14px; padding: 5px 10px; }
+            h1 { font-size: 28px; }
+            .container { padding: 20px; }
+        }
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .logo img {
+            max-width: 150px;
+            height: auto;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>🎁 Claim Your Free Gift Card!</h1>
-        <p>Limited time offer – get a $100 gift card instantly.</p>
-        <div class="offer-box">
-            <p><strong>Step 1:</strong> Click the button below.</p>
-            <p><strong>Step 2:</strong> Enter your email and zip code.</p>
-            <p><strong>Step 3:</strong> Receive your gift card in minutes!</p>
-            <a href="#" id="offerLink" class="btn" target="_blank">👉 Claim Now 👈</a>
-        </div>
-        <div class="note">
-            *This offer is available for US residents only. Terms apply.
-        </div>
-    </div>
 
-    <script>
-        // ضع رابط العرض الخاص بك من MyLead بدلاً من الرابط المثال أدناه
-        const offerUrl = "https://your-mylead-offer-link.com";
-        document.getElementById("offerLink").onclick = function() {
-            window.open(offerUrl, "_blank");
-        };
-    </script>
+<nav>
+    <a href="#home">🏠 Home</a>
+    <a href="#about">ℹ️ About</a>
+    <a href="#offers">🎁 Offers</a>
+</nav>
+
+<div class="container">
+    <!-- Home Section -->
+    <section id="home">
+        <div class="logo">
+            <!-- Placeholder for logo - replace logo.png with your actual file -->
+            <img src="logo.png" alt="DigiNest Logo">
+        </div>
+        <h1>Welcome to DigiNest</h1>
+        <p style="font-size: 20px; margin-bottom: 20px;">Exclusive Deals & Free Gift Cards – Instant Access</p>
+        <!-- Hero image - replace hero.jpg with your actual file -->
+        <img src="hero.jpg" alt="Exclusive Offers" style="width:100%; max-width:500px; border-radius:15px; margin:20px 0;">
+        <p>We bring you the best affiliate offers from trusted partners. Get free gift cards, discounts, and digital products with just a few clicks.</p>
+        <a href="#offers" class="btn">Browse Offers ➡️</a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About DigiNest</h2>
+        <!-- About image - replace about.jpg with your actual file -->
+        <img src="about.jpg" alt="About us" style="width:100%; max-width:300px; border-radius:15px; float:right; margin-left:20px; margin-bottom:20px;">
+        <p>DigiNest is dedicated to curating high-quality, legitimate affiliate offers. We test and verify each offer before sharing it with you.</p>
+        <p>Our mission is to help you access free rewards, gift cards, and exclusive discounts without any hidden fees or risks.</p>
+        <p>For any inquiries: <strong>diginest.biz@gmail.com</strong></p>
+    </section>
+
+    <!-- Offers Section -->
+    <section id="offers">
+        <h2>🎁 Today's Offers</h2>
+        
+        <!-- Offer 1 -->
+        <div class="offer-card">
+            <img src="offer1.jpg" alt="Offer 1">
+            <h3>$10 Amazon Gift Card</h3>
+            <p>Enter your email and zip code (US only) to receive a free Amazon gift card instantly.</p>
+            <!-- Replace # with your actual MyLead affiliate link -->
+            <a href="#" class="btn" target="_blank">Claim Gift Card</a>
+            <p style="font-size:12px; margin-top:10px;">*Limited quantities</p>
+        </div>
+
+        <!-- Offer 2 -->
+        <div class="offer-card">
+            <img src="offer2.jpg" alt="Offer 2">
+            <h3>20% Off Coupon – First Purchase</h3>
+            <p>Subscribe to our partner's newsletter and get a 20% discount code for your next order.</p>
+            <a href="#" class="btn" target="_blank">Get Coupon</a>
+        </div>
+
+        <!-- Offer 3 -->
+        <div class="offer-card">
+            <img src="offer3.jpg" alt="Offer 3">
+            <h3>Free $5 Starbucks Card</h3>
+            <p>Complete a quick survey and claim your Starbucks e-gift card. Available for US/UK residents.</p>
+            <a href="#" class="btn" target="_blank">Claim Now</a>
+        </div>
+
+        <p style="text-align:center; margin-top:20px;">More offers added weekly. Follow us on social media.</p>
+    </section>
+
+    <!-- Brevo Email Subscription Form (embedded via iframe) -->
+    <section style="background:#eef2f7;">
+        <h2 style="color:#1e2a3e;">📧 Join Our Mailing List</h2>
+        <p>Get exclusive deals and early access to new offers – delivered straight to your inbox.</p>
+        <iframe src="https://fe8ee24c.sibforms.com/serve/MUIFAPPJw67MShsPR6gLGBCVhzZHxrdiBT75ikzX-62YolQ0eH4xfWeZwDgs6CrOJRFsxNFnHpZzM7QIPbluIBK4ivu-vKCNWyy7wBfjM4Oaem-MD05J7gIFPVGVOBYtxTbNICgee38lbWXNqt4G8a1rACglR7aAl_3cinlxfxt6arVAf4uIu1-f0GyTVouhDPe4NoIU-8a24NXlvg==" 
+                title="Brevo Subscription Form"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+        </iframe>
+        <p style="font-size:12px; margin-top:10px;">We respect your privacy. Unsubscribe anytime.</p>
+    </section>
+</div>
+
+<div class="footer">
+    <div class="social-links">
+        <strong>Follow us:</strong><br><br>
+        <a href="https://medium.com/@diginest.biz" target="_blank">Medium</a> |
+        <a href="https://linktr.ee/diginest.biz" target="_blank">Linktree</a> |
+        <a href="https://www.pinterest.com/diginestbiz/" target="_blank">Pinterest</a>
+    </div>
+    <p>© 2025 DigiNest - All Rights Reserved</p>
+    <p>Contact: <strong>diginest.biz@gmail.com</strong></p>
+</div>
+
 </body>
 </html>
