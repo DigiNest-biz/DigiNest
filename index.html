@@ -81,20 +81,42 @@
             background: #ff4757;
             transform: scale(1.03);
         }
-        .offer-card {
+        /* --- التعديل الجديد لجعل العروض بجانب بعضها --- */
+        .offers-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin: 30px 0;
+        }
+        .offer-item {
+            flex: 1;
+            min-width: 250px;
+            max-width: 320px;
             background: #f9f9f9;
             border-radius: 15px;
             padding: 20px;
-            margin-bottom: 25px;
             text-align: center;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
         }
-        .offer-card img {
+        .offer-item:hover {
+            transform: translateY(-5px);
+        }
+        .offer-item img {
+            width: 100%;
             max-width: 100%;
             height: auto;
             border-radius: 10px;
             margin-bottom: 15px;
         }
+        .offer-item .btn {
+            background-color: #4CAF50;
+            font-size: 16px;
+            padding: 10px 20px;
+            margin-top: 10px;
+        }
+        /* -------------------------------- */
         .footer {
             background: #1e2a3e;
             color: white;
@@ -124,6 +146,7 @@
             nav a { font-size: 14px; padding: 5px 10px; }
             h1 { font-size: 28px; }
             .container { padding: 20px; }
+            .offer-item { min-width: 100%; max-width: 100%; }
         }
         .logo {
             text-align: center;
@@ -147,7 +170,6 @@
     <!-- Home Section -->
     <section id="home">
         <div class="logo">
-            <!-- Placeholder for logo - replace logo.png with your actual file -->
             <img src="Logo.png.png" alt="DigiNest Logo">
         </div>
         <h1>Welcome to DigiNest</h1>
@@ -165,46 +187,47 @@
         <p>For any inquiries: <strong>diginest.biz@gmail.com</strong></p>
     </section>
 
-    <!-- Offers Section -->
+    <!-- Offers Section - العروض بجانب بعضها -->
     <section id="offers">
         <h2>🎁 Great Offers</h2>
-        
-        <!-- Offer 1 -->
-        <img src="toolsuite.png.png" alt="ToolSuite VIP Offer" 
-     style="width:100%; max-width:400px; display:block; margin:20px auto; border-radius:15px; box-shadow:0 4px 8px rgba(0,0,0,0.1);">
-       <div style="text-align: center; margin: 30px 0;">
-    <a href="https://whop.com/toolsuite/buy-vip?a=diginest-biz" 
-       target="_blank" 
-       rel="nofollow sponsored"
-       style="background-color: #4CAF50; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 18px; font-weight: bold; margin: 4px 2px; cursor: pointer; border-radius: 8px;">
-       Get Now
-    </a>
-</div>
-
-                <!-- Offer 2 -->
-        <img src="zoogvpn.png.png" alt="ZoogVPN Offer" 
-     style="width:100%; max-width:400px; display:block; margin:20px auto; border-radius:15px; box-shadow:0 4px 8px rgba(0,0,0,0.1);">
-       <div style="text-align: center; margin: 30px 0;">
-    <a href="https://zoogvpn.com/?utm_source=zoog_affiliate&utm_medium=revshare&utm_campaign=aff69d3b75e67d14&a_aid=69d3b75e67d14" 
-       target="_blank" 
-       rel="nofollow sponsored"
-       style="background-color: #4CAF50; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 18px; font-weight: bold; margin: 4px 2px; cursor: pointer; border-radius: 8px;">
-       Get Now
-    </a>
-</div>
-
-         <!-- Offer 3 -->
-        <img src="sweepstakes.png.png" alt="sweepstakes Offer" 
-     style="width:100%; max-width:400px; display:block; margin:20px auto; border-radius:15px; box-shadow:0 4px 8px rgba(0,0,0,0.1);">
-       <div style="text-align: center; margin: 30px 0;">
-    <a href="https://safeoffers.pro/a/DkOxvsO4yGTZr4B" 
-       target="_blank" 
-       rel="nofollow sponsored"
-       style="background-color: #4CAF50; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 18px; font-weight: bold; margin: 4px 2px; cursor: pointer; border-radius: 8px;">
-       Get Now
-    </a>
-</div>
-
+        <div class="offers-container">
+            <!-- Offer 1: ToolSuite -->
+            <div class="offer-item">
+                <img src="toolsuite.png.png" alt="ToolSuite VIP Offer">
+                <div style="text-align: center; margin: 15px 0;">
+                    <a href="https://whop.com/toolsuite/buy-vip?a=diginest-biz" 
+                       target="_blank" 
+                       rel="nofollow sponsored"
+                       class="btn">
+                       Get Now
+                    </a>
+                </div>
+            </div>
+            <!-- Offer 2: ZoogVPN -->
+            <div class="offer-item">
+                <img src="zoogvpn.png.png" alt="ZoogVPN Offer">
+                <div style="text-align: center; margin: 15px 0;">
+                    <a href="https://zoogvpn.com/?utm_source=zoog_affiliate&utm_medium=revshare&utm_campaign=aff69d3b75e67d14&a_aid=69d3b75e67d14" 
+                       target="_blank" 
+                       rel="nofollow sponsored"
+                       class="btn">
+                       Get Now
+                    </a>
+                </div>
+            </div>
+            <!-- Offer 3: Sweepstakes -->
+            <div class="offer-item">
+                <img src="sweepstakes.png.png" alt="Sweepstakes Offer">
+                <div style="text-align: center; margin: 15px 0;">
+                    <a href="https://safeoffers.pro/a/DkOxvsO4yGTZr4B" 
+                       target="_blank" 
+                       rel="nofollow sponsored"
+                       class="btn">
+                       Get Now
+                    </a>
+                </div>
+            </div>
+        </div>
         <p style="text-align:center; margin-top:20px;">More offers added weekly.</p>
     </section>
 
@@ -227,10 +250,9 @@
         <a href="https://medium.com/@diginest.biz" target="_blank">Medium</a> |
         <a href="https://linktr.ee/diginest.biz" target="_blank">Linktree</a> |
         <a href="https://www.pinterest.com/diginestbiz/" target="_blank">Pinterest</a> |
-        <a href="www.tumblr.com/diginest-biz" target="_blank">Tumblr</a> |
+        <a href="www.tumblr.com/diginest-biz" target="_blank">Tumblr</a>
     </div>
     <p>© 2026 DigiNest - All Rights Reserved</p>
-    
 </div>
 
 </body>
